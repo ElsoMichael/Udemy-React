@@ -10,7 +10,7 @@ class App extends Component {
       { name: 'Alyssa', age: '26' }
     ],
     otherState: 'Some other value'
-  }
+  };
 
   switchNameHandler = (newName) => {
     // console.log("Was Clicked")
@@ -21,8 +21,18 @@ class App extends Component {
         { name: 'Jc', age: '55' },
         { name: 'Alyssa', age: '26' }
       ]
-    })
-  }
+    });
+  };
+
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        { name: 'Michael', age: '24' },
+        { name: event.target.value, age: '55' },
+        { name: 'Alyssa', age: '26' }
+      ]
+    });
+  };
 
   render() {
     return (
@@ -36,14 +46,15 @@ class App extends Component {
         <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age}
-          click={this.switchNameHandler.bind(this, 'Michael!')}>Hobby: Sports</Person>
+          click={this.switchNameHandler.bind(this, 'Michael!')}
+          changed={this.nameChangedHandler}>Hobby: Sports</Person>
         <Person 
           name={this.state.persons[2].name} 
           age={this.state.persons[2].age}/>
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, "Does this work now?"));
-  }
-}
+  };
+};
 
 export default App;
