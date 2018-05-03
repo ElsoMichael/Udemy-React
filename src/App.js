@@ -6,9 +6,9 @@ import { inherits } from 'util';
 class App extends Component {
   state = {
     persons: [
-      { name: 'Michael', age: '23' },
-      { name: 'Jc', age: '55' },
-      { name: 'Alyssa', age: '26' }
+      { id: '1', name: 'Michael', age: '23' },
+      { id: '2', name: 'Jc', age: '55' },
+      { id: '3', name: 'Alyssa', age: '26' }
     ],
     otherState: 'Some other value',
     showPersons: false
@@ -63,7 +63,7 @@ class App extends Component {
       persons = (
         <div >
           {this.state.persons.map((person, index) => {
-            return <Person click={this.deletePersonHandler(index)} name={person.name} age={person.age} />
+            return <Person click={this.deletePersonHandler(index)} name={person.name} age={person.age} key={person.id} />
           })}
           {/* <Person 
             name={this.state.persons[0].name} 
