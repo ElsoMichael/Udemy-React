@@ -58,14 +58,16 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer'
-    };
+    // const style = {
+    //   backgroundColor: 'green',
+    //   color: 'white',
+    //   font: 'inherit',
+    //   border: '1px solid blue',
+    //   padding: '8px',
+    //   cursor: 'pointer'
+    // };
+
+    let btnClass = '';
 
     let persons = null;
 
@@ -94,7 +96,8 @@ class App extends Component {
         </div>
       );
 
-      style.backgroundColor = 'red';
+      btnClass = classes.Red;
+      // style.backgroundColor = 'red';
     };
 
     // let classes = ['red', 'bold'].join(' ');
@@ -111,7 +114,8 @@ class App extends Component {
         <h1>Hi, I'm A React App!</h1>
         <p className={assiagnedClasses.join(' ')}>This is really working!</p>
         <button 
-          style={style}
+          // style={style}
+          className={btnClass}
           onClick={this.togglePersonHandler}>Toggle Persons</button>
         {persons}
         {/* { this.state.showPersons === true ?
