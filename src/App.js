@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
 // import { inherits } from 'util';
+// Bug
 
 class App extends Component {
   state = {
