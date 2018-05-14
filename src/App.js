@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
-// import { inherits } from 'util';
-// Bug
+import { inherits } from 'util';
 
 class App extends Component {
   state = {
