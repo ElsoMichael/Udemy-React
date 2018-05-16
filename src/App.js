@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
 import { inherits } from 'util';
+import ErrorBoundry from './ErrorBoundry/ErrorBoundry'
 
 class App extends Component {
   state = {
@@ -75,12 +76,13 @@ class App extends Component {
       persons = (
         <div >
           {this.state.persons.map((person, index) => {
-            return <Person 
+            return <ErrorBoundry><Person 
               click={this.deletePersonHandler(index)} 
               name={person.name} 
               age={person.age} 
               key={person.id} 
               changed={(event) => this.nameChangedHandler(event, person.id)} />
+              </ErrorBoundry>
           })}
           {/* <Person 
             name={this.state.persons[0].name} 
