@@ -2,9 +2,22 @@ import React, { Component } from 'react';
 import Person from './Person/Person';
 
 class Persons extends Component {
+  constructor(props) {
+    super(props);
+    console.log("[App.js] Inside Constructor", props);
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside ComponentWillMount()');
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount()');
+  }
+  
   render() {
     return (
-      props.persons.map((person, index) => {
+      this.props.persons.map((person, index) => {
         return <Person 
           click={this.props.click(index)} 
           name={person.name} 
