@@ -14,6 +14,10 @@ class Persons extends Component {
   componentDidMount() {
     console.log('[Persons.js] Inside componentDidMount()');
   }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('[Update Persons.js] Inside component will recive props');
+  }
   
   render() {
     return (
