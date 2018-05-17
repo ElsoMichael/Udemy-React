@@ -19,6 +19,11 @@ class Persons extends Component {
     console.log('[Update Persons.js] Inside component will recive props');
   }
   
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('[Udate Persons.js] Inside should component update');
+    return false;
+  }
+
   render() {
     return (
       this.props.persons.map((person, index) => {
