@@ -4,15 +4,15 @@ import Person from './Person/Person';
 class Persons extends Component {
   constructor(props) {
     super(props);
-    console.log("[App.js] Inside Constructor", props);
+    console.log("[Persons.js] Inside Constructor", props);
   }
 
   componentWillMount() {
-    console.log('[App.js] Inside ComponentWillMount()');
+    console.log('[Persons.js] Inside ComponentWillMount()');
   }
 
   componentDidMount() {
-    console.log('[App.js] Inside componentDidMount()');
+    console.log('[Persons.js] Inside componentDidMount()');
   }
   
   render() {
