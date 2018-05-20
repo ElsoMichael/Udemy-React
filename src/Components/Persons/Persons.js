@@ -18,12 +18,6 @@ class Persons extends PureComponent {
   componentWillReceiveProps(nextProps) {
     console.log('[Update Persons.js] Inside component will recive props');
   }
-  
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log('[Udate Persons.js] Inside should component update');
-  //   // return nextProps.persons !== this.props.persons;
-  //   return true;
-  // }
 
   componentWillUpdate(nextProps, nextState) {
     console.log('[Udate Persons.js] Inside component will udate');
