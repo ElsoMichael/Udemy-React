@@ -20,11 +20,6 @@ class App extends PureComponent {
     console.log('[App.js] Inside componentDidMount()');
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log('[Udate App.js] Inside should component update');
-  //   return nextState.persons !== this.state.persons || nextState.showPersons !== this.state.showPersons;
-  // }
-
   componentWillUpdate(nextProps, nextState) {
     console.log('[Udate App.js] Inside component will udate');
   }
