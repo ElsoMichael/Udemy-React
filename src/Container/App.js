@@ -5,6 +5,7 @@ import { inherits } from 'util';
 import ErrorBoundry from './ErrorBoundry/ErrorBoundry'
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
+import withClass from '../hoc/WithClass';
 
 class App extends PureComponent {
   constructor(props) {
@@ -78,7 +79,7 @@ class App extends PureComponent {
     };
 
     return (
-      <div className={classes.App}> 
+      <withClass classes={classes.App}> 
         <button onClick={() => {this.setState({showPersons: true})}}>Show Persons</button>
         <Cockpit 
           appTitle={this.props.title}
@@ -86,7 +87,7 @@ class App extends PureComponent {
           persons={this.state.persons}
           clicked={this.togglePersonHandler} />
         {persons}
-      </div>
+      </withClass>
     );
   };
 };
