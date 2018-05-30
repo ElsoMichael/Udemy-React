@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import classes from './App.css';
-// import Person from './Person/Person';
-// import { inherits } from 'util';
-// import ErrorBoundry from './ErrorBoundry/ErrorBoundry'
+import Person from './Person/Person';
+import { inherits } from 'util';
+import ErrorBoundry from './ErrorBoundry/ErrorBoundry'
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
 import Aux from '../hoc/Aux';
