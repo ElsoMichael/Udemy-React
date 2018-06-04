@@ -28,6 +28,15 @@ class App extends PureComponent {
     console.log('[Udate App.js] Inside component will udate');
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('[Udate App.js] Inside getDerivedStateFromProps', nextProps, prevState);
+
+    return prevState;
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('[Udate App.js] Inside getSnapshotBeforeUpdate');
+  }
 
   state = {
     persons: [
